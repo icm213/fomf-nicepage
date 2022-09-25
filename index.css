@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flexBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template: repeat(12, 4rem)/repeat(12, 8.33vw);
+}
+
+nav {
+  background-color: #0f6171;
+}
+
+nav .nav--container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 3rem 1.5rem 3rem;
+}
+
+nav .nav--container h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-style: italic;
+}
+
+nav .nav--container .hamburger {
+  height: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-evenly;
+}
+
+nav .nav--container .hamburger .belt {
+  width: 1.2rem;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+main {
+  background-image: linear-gradient(#06424e, #19818f);
+  overflow: hidden;
+}
+
+main .section--one h1 {
+  font-size: 6rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #ffffff;
+  grid-column: 3 / span 6;
+  grid-row: 9 / span 2;
+  z-index: 5;
+}
+
+main .section--one .section--one__bg--image {
+  grid-row: 1 / span 9;
+  grid-column: 1 / span 12;
+  background-image: url("pics/3c846e997a445f3aad66e662d9aa8d0f.jpg");
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+
+main .section--one .section--one__painting--image {
+  grid-row: 9 / span 6;
+  grid-column: 1 / span 12;
+  background-image: url("pics/Untitled2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+main .section--one .section--one__gradient {
+  grid-row: 3 / span 7;
+  grid-column: 2 / span 8;
+  z-index: 2;
+  background-image: linear-gradient(#a58243, #0f6171);
+}
+
+main .section--one .section--one__face {
+  grid-row: 4 / span 7;
+  grid-column: 3 / span 9;
+  z-index: 4;
+  background-image: url("pics/mainface.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    min-width: 400px;
+  }
+  main .section--one {
+    min-width: 400px;
+  }
+  main .section--one .section--one__bg--image {
+    min-width: 400px;
+  }
+  main .section--one .section--one__face {
+    min-width: 330px;
+    grid-column: 2 / span 10;
+    grid-row: 4 / span 7;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .grid {
+    grid-template: repeat(13, 6rem)/repeat(12, 8.33vw);
+  }
+  main .section--one .section--one__bg--image {
+    grid-row: 1 / span 8;
+  }
+  main .section--one .section--one__painting--image {
+    grid-column: 2 / span 11;
+    grid-row: 8 / span 6;
+  }
+  main .section--one .section--one__gradient {
+    grid-column: 2 / span 7;
+    grid-row: 3 / span 6;
+  }
+  main .section--one .section--one__face {
+    grid-column: 3 / span 8;
+    grid-row: 4 / span 6;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .grid {
+    grid-template: repeat(26, 2rem)/repeat(24, 4.17vw);
+  }
+  main .section--one h1 {
+    grid-column: 12 / span 6;
+    grid-row: 16 / span 8;
+  }
+  main .section--one .section--one__bg--image {
+    grid-column: 1 / span 11;
+    grid-row: 1 / span 24;
+    background-size: 300%;
+  }
+  main .section--one .section--one__painting--image {
+    grid-column: 8 / span 16;
+    grid-row: 12 / span 12;
+  }
+  main .section--one .section--one__gradient {
+    grid-column: 4 / span 8;
+    grid-row: 3 / span 12;
+  }
+  main .section--one .section--one__face {
+    grid-column: 7 / span 12;
+    grid-row: 5 / span 14;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  main .section--one h1 {
+    grid-column: 14 / span 6;
+    grid-row: 13 / span 8;
+  }
+  main .section--one .section--one__bg--image {
+    grid-column: 1 / span 11;
+    grid-row: 1 / span 24;
+    background-size: 300%;
+  }
+  main .section--one .section--one__painting--image {
+    grid-column: 8 / span 16;
+    grid-row: 9 / span 16;
+  }
+  main .section--one .section--one__gradient {
+    grid-column: 5 / span 7;
+    grid-row: 3 / span 14;
+  }
+  main .section--one .section--one__face {
+    grid-column: 7 / span 12;
+    grid-row: 5 / span 16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main .section--one h1 {
+    grid-column: 13 / span 6;
+    grid-row: 13 / span 8;
+  }
+  main .section--one .section--one__bg--image {
+    grid-column: 1 / span 11;
+    grid-row: 1 / span 24;
+    background-size: 300%;
+  }
+  main .section--one .section--one__painting--image {
+    grid-column: 8 / span 14;
+    grid-row: 9 / span 15;
+  }
+  main .section--one .section--one__gradient {
+    grid-column: 6 / span 6;
+    grid-row: 3 / span 14;
+  }
+  main .section--one .section--one__face {
+    grid-column: 7 / span 10;
+    grid-row: 5 / span 16;
+  }
+}
